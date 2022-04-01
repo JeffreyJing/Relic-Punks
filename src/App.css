@@ -1,0 +1,53 @@
+@font-face {
+	font-family: 'Interstate Bold';
+	src: url(./assets/fonts/interstatebold.otf) format('opentype');
+}
+
+@font-face {
+	font-family: 'Interstate Light';
+	src: url(./assets/fonts/interstatelight.otf) format('opentype');
+}
+
+:root {
+	--main-color: white;
+	--hover-color: rgb(112, 109, 109);
+	--accent-color: rgb(199, 208,216);
+	--side-margin: 10vw;
+	--side-margin-mobile: 5vw;
+}
+
+html, body {
+	/* background-color: black; */
+	font-family: 'Interstate Bold', Helvetica, sans-serif;
+	color: black;
+	padding: 0px;
+	margin: 0px;
+	overflow-x: hidden;
+}
+
+button {
+	background: black;
+	color: var(--main-color);
+	/* border: 2px solid var(--main-color); */
+	border: none;
+	border-radius: 8px;
+	padding: 8px;
+	cursor: pointer;
+	font-family: 'Interstate Bold', Helvetica, sans-serif;
+	width: 70%;
+	font-size: 20px;
+
+	transition: box-shadow 250ms ease;
+}
+
+button:hover {
+	box-shadow: 0px 0px 6px 2px var(--hover-color);
+}
+
+a, a:visited {
+	color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Interstate Bold', sans-serif;
+}
