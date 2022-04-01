@@ -3,12 +3,12 @@
 	grid-template-columns: 1fr 1fr 1fr;
 	margin: 20px;
 	align-items: center;
-	background-color: white;
-	color: black;
+	background-color: black;
+	color: white;
 }
 
 .navbar-emblem {
-	font-size: 40px;
+	font-size: 30px;
 	font-family: 'Interstate Bold';
 	text-align: center;
 }

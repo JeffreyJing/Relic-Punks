@@ -44,9 +44,9 @@ const Navbar = () => {
 					METARELICS
 				</div>
 				<div className='navbar-items'>
-					<a href={TWITTER_URL} target="_blank" rel="noopener noreferrer"><TwitterLogo /></a>
+					{/* <a href={TWITTER_URL} target="_blank" rel="noopener noreferrer"><TwitterLogo /></a>
 					<a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer"><InstagramLogo /></a>
-					<DiscordLogo />
+					<DiscordLogo /> */}
 				</div>
 			</div>
 			<AnimateHeight duration={500} height={(width < 1000 && navOpen) ? 'auto': 0}>

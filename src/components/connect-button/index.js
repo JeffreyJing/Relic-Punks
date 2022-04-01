@@ -15,7 +15,7 @@ const ConnectButton = () => {
 					}
 				}}
 			>
-				{connected ? "Connected" : "Connect"}
+				{connected ? "CONNECTED" : "CONNECT WALLET"}
 			</button>
 		</div>
 	);
