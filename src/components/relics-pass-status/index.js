@@ -1,3 +1,4 @@
+import { faCircleCheck, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 
@@ -15,8 +16,8 @@ const RelicsPassStatus = () => {
                 : 'no-pass'
         }>{
             hasPass
-                ? <FontAwesomeIcon icon="fa-solid fa-circle-check" />
-                : <FontAwesomeIcon icon="fa-solid fa-circle-xmark" />
+                ? <FontAwesomeIcon icon={faCircleCheck} />
+                : <FontAwesomeIcon icon={faCircleXmark} />
         }</span></p>
     )
 }

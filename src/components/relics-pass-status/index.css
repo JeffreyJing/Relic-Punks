@@ -1,4 +1,8 @@
 
 .has-pass {
-    
+    color: rgb(0, 255, 0);
+}
+
+.no-pass {
+    color: red;
 }
