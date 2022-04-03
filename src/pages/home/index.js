@@ -31,6 +31,7 @@ const Home = () => {
 				<p>The "Relic Punks" are a community inspired project created by Jeff Cole.</p>
 				<p>This collection is a tribute to important cultural technology of the past.</p>
 			</div>
+			
 		</>
 	);
 }
