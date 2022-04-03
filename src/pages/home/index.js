@@ -11,6 +11,7 @@ import relicPunks from '../../assets/images/relicpunks.jpg';
 import ConnectButton from '../../components/connect-button';
 import Punks from '../../components/punks';
 import relic from '../../assets/images/bottom-banner.jpg';
+import RelicsPassStatus from '../../components/relics-pass-status';
 
 const Home = () => {
 	const [width, setWidth] = useState(window.innerWidth);
@@ -27,7 +28,7 @@ const Home = () => {
 				<h2>RELIC PUNKS</h2>
 				<p>Choose Wisely</p>
 				<ConnectButton />
-				<div className='relics-pass-status'>&lt;Insert relics pass status here&gt;</div>
+				<div className='relics-pass-status'><RelicsPassStatus /></div>
 			</div>
 			<div className='under-banner'>
 				<p>The "Relic Punks" are a community inspired project created by Jeff Cole.</p>
