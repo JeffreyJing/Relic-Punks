@@ -37,6 +37,8 @@ import { useState, useEffect } from 'react';
 
 import './index.css';
 import SimpleModal from 'simple-react-modal';
+import { useContext } from 'react/cjs/react.production.min';
+import { Web3Context } from '../../context/web3-context';
 
 const PUNK_ITEMS = [
     {
@@ -218,8 +220,20 @@ const PUNK_ITEMS = [
 const MOBILE_EXTRA = 1;
 
 const Punks = () => {
+    const { connected } = useContext(Web3Context);
     const [width, setWidth] = useState(window.innerWidth);
-    const [activePunk, setActivePunk] = useState(undefined); 
+    const [activePunk, setActivePunk] = useState(undefined);
+    const [editionsMinted, setEditionsMinted] = useState({});
+
+    useEffect(() => {
+        let canceled = false;
+
+        // TODO: GET EDITIONS MINTED COUNT FROM THE CONTRACT HERE, PROCESS
+
+        return () => {
+            canceled = true;
+        }
+    }, [connected])
 
 	useEffect(() => {
         window.addEventListener("resize", () => {
@@ -236,6 +250,8 @@ const Punks = () => {
             });
         }
     }
+    
+    const activePunkItem = activePunk ? PUNK_ITEMS[activePunk] : undefined;
 
     return (
         <>
@@ -245,14 +261,21 @@ const Punks = () => {
                     backgroundColor: 'black'
                 }}
             >
-
+                {activePunkItem && (
+                    <div className='active-punk'>
+                        <img src={activePunkItem.image} />
+                        <h2>{activePunkItem.name}</h2>
+                        <p>Editions Minted: {}</p>
+                        <button>MINT PUNK</button>
+                    </div>
+                )}
             </SimpleModal>
             <div className="punks">
                 {
-                    [...PUNK_ITEMS, ...extraPunks].map((item) => (
+                    [...PUNK_ITEMS, ...extraPunks].map((item, i) => (
                         <div className='punk-item' key={item.id} role='button' onClick={() => {
                             if (!item.spacer) {
-                                setActivePunk(item.id);
+                                setActivePunk(i);
                             }
                         }}>
                             {item.spacer && <div className='punk-spacer'>
