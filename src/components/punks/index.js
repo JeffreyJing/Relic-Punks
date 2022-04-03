@@ -36,6 +36,7 @@ import pwalkman from '../../assets/images/punks/walkman.jpg';
 import { useState, useEffect } from 'react';
 
 import './index.css';
+import SimpleModal from 'simple-react-modal';
 
 const PUNK_ITEMS = [
     {
@@ -184,6 +185,7 @@ const MOBILE_EXTRA = 1;
 
 const Punks = () => {
     const [width, setWidth] = useState(window.innerWidth);
+    const [activePunk, setActivePunk] = useState(undefined); 
 
 	useEffect(() => {
         window.addEventListener("resize", () => {
@@ -201,18 +203,29 @@ const Punks = () => {
         }
     }
 
-    return <div className="punks">
-        {
-            [...PUNK_ITEMS, ...extraPunks].map((item) => (
-                <div className='punk-item' key={item.id}>
-                    {item.spacer && <div className='punk-spacer'>
-                        <div>?</div>
-                    </div>}
-                    {!item.spacer && <img src={item.image} alt={`punk id ${item.id}`} />}
-                </div>
-            ))
-        }
-    </div>
+    return (
+        <>
+            <SimpleModal show={activePunk !== undefined} onClose={() => setActivePunk(undefined)}>
+
+            </SimpleModal>
+            <div className="punks">
+                {
+                    [...PUNK_ITEMS, ...extraPunks].map((item) => (
+                        <div className='punk-item' key={item.id} role='button' onClick={() => {
+                            if (!item.spacer) {
+                                setActivePunk(item.id);
+                            }
+                        }}>
+                            {item.spacer && <div className='punk-spacer'>
+                                <div>?</div>
+                            </div>}
+                            {!item.spacer && <img src={item.image} alt={`punk id ${item.id}`} />}
+                        </div>
+                    ))
+                }
+            </div>
+        </>
+    )
 }
 
 export default Punks;

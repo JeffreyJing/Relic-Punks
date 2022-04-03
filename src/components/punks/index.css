@@ -12,6 +12,7 @@
 .punk-item {
     border-radius: 10px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .punk-item img {

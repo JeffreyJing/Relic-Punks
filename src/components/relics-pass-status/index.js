@@ -1,7 +1,7 @@
 import { faCircleCheck, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
-import { useContext, useEffect } from 'react/cjs/react.production.min';
+import { useContext, useEffect } from 'react';
 import { Web3Context } from '../../context/web3-context';
 
 import './index.css';
@@ -20,7 +20,7 @@ const RelicsPassStatus = () => {
         return () => {
             canceled = true;
         };
-    }, [connected])
+    }, [connected]);
 
     return (
         <p>Relics Pass <span className={
