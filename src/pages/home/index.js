@@ -9,6 +9,7 @@ import buildOurBond from '../../assets/images/bottom-banner.jpg';
 import { NavLink } from 'react-router-dom';
 import relicPunks from '../../assets/images/relicpunks.jpg';
 import ConnectButton from '../../components/connect-button';
+import Punks from '../../components/punks';
 
 const Home = () => {
 	const [width, setWidth] = useState(window.innerWidth);
@@ -31,7 +32,7 @@ const Home = () => {
 				<p>The "Relic Punks" are a community inspired project created by Jeff Cole.</p>
 				<p>This collection is a tribute to important cultural technology of the past.</p>
 			</div>
-			
+			<Punks />
 		</>
 	);
 }
