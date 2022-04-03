@@ -72,7 +72,7 @@
     width: 50px;
 } */
 
-.banner-opensea {
+/* .banner-opensea {
     background-color: white;
     color: black;
     display: flex;
@@ -83,17 +83,17 @@
 
 .banner-content a {
     text-decoration: none;
-}
+} */
 
 @media screen and (max-width: 1000px) {
-    .banner-opensea {
+    /* .banner-opensea {
         background-color: black;
         color: white;
         display: flex;
         justify-content: center;
         align-items: center;
         margin: auto;
-    }
+    } */
 
     /** DO NOT CHANGE THESE NUMBERS **/
     .banner-video video {

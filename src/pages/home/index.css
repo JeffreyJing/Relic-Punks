@@ -111,6 +111,25 @@
 	font-size: 25px;
 }
 
+.banner-opensea {
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+.relics-text-content a {
+    text-decoration: none;
+}
+
+.relics-text-content button {
+	width: 100%;
+}
+
 @media screen and (max-width: 1000px) {
 	.footbar {
 		grid-template-columns: 1fr;
@@ -120,5 +139,24 @@
 		text-align: center;
 		margin-top: 50px;
 		padding-right: 0px;
+	}
+
+	.relics-pass {
+		grid-template-columns: 1fr;
+	}
+
+	.relics-text-content {
+		padding-left: 10%;
+		padding-right: 10%;
+		text-align: center;
+	}
+
+	.relics-image {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
+	.relics-text-content  {
+		margin: auto;
 	}
 }
