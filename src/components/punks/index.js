@@ -176,10 +176,6 @@ const PUNK_ITEMS = [
         spacer: true,
         id: 34
     },
-    {
-        spacer: true,
-        id: 35
-    }
 ]
 
 const Punks = () => {
@@ -187,9 +183,9 @@ const Punks = () => {
         {
             PUNK_ITEMS.map((item) => (
                 <div className='punk-item' key={item.id}>
-                    {item.spacer && <>
-                    
-                    </>}
+                    {item.spacer && <div className='punk-spacer'>
+                        <div>?</div>
+                    </div>}
                     {!item.spacer && <img src={item.image} alt={`punk id ${item.id}`} />}
                 </div>
             ))

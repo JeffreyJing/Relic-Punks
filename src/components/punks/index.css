@@ -2,6 +2,7 @@
     width: 60%;
     margin: auto;
     margin-top: 75px;
+    margin-bottom: 75px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     column-gap: 50px;
@@ -16,4 +17,19 @@
 .punk-item img {
     width: 100%;
     height: 100%;
+}
+
+.punk-spacer {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    text-align: center;
+    color: black;
+    font-size: 75px;
+    display: flex;
+}
+
+.punk-item div {
+    justify-content: center;
+    align-items: center;
 }
