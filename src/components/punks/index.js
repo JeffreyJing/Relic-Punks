@@ -33,6 +33,8 @@ import ptiffanywatch from '../../assets/images/punks/tiffanywatch.jpg';
 import pvw from '../../assets/images/punks/vw.jpg';
 import pwalkman from '../../assets/images/punks/walkman.jpg';
 
+import './index.css';
+
 const PUNK_ITEMS = [
     {
         image: p2140,
