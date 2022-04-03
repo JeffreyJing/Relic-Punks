@@ -33,3 +33,46 @@
 .under-banner p {
 	margin: 7px;
 }
+
+
+.footbar {
+	background-color: black;
+	overflow: hidden;
+	color: white;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+
+	padding-top: 50px;
+	padding-bottom: 100px;
+}
+
+.footbar-logos {
+	display: flex;
+	justify-content: center;
+	column-gap: 40px;
+}
+
+.footbar-powered-by {
+	text-align: right;
+	font-family: 'Interstate Light';
+	padding-right: 10vw;
+}
+
+.footbar svg {
+	fill: white;
+	height: 60px;
+	width: 60px;
+}
+
+@media screen and (max-width: 1000px) {
+	.footbar {
+		grid-template-columns: 1fr;
+	}
+
+	.footbar-powered-by {
+		text-align: center;
+		margin-top: 50px;
+		padding-right: 0px;
+	}
+}

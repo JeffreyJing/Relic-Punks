@@ -33,6 +33,27 @@ const Home = () => {
 				<p>This collection is a tribute to important cultural technology of the past.</p>
 			</div>
 			<Punks />
+			
+			<div className='footbar'>
+				{width > 1000 && (
+					<div className='footbar-r-logo'></div>
+				)}
+				<div className='footbar-logos'>
+					<a href={TWITTER_URL} target='blank' rel='noopener noreferrer'><TwitterLogo /></a>
+					<a href={INSTAGRAM_URL} target='blank' rel='noopener noreferrer'><InstagramLogo /></a>
+					<a href={DISCORD_URL} target='blank' rel='noopener noreferrer'><DiscordLogo /></a>
+				</div>
+				<div className='footbar-powered-by'>
+					<p>Powered By Ikonick</p>
+					<p>&copy; Copyright 2022 - Metarelics</p>
+					<div className='terms-of-use'>
+						<NavLink to='/terms-of-use'>Terms of use</NavLink>
+					</div>
+				</div>
+				{width < 1000 && (
+					<div className='footbar-r-logo'></div>
+				)}
+			</div>
 		</>
 	);
 }

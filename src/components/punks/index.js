@@ -33,6 +33,8 @@ import ptiffanywatch from '../../assets/images/punks/tiffanywatch.jpg';
 import pvw from '../../assets/images/punks/vw.jpg';
 import pwalkman from '../../assets/images/punks/walkman.jpg';
 
+import { useState, useEffect } from 'react';
+
 import './index.css';
 
 const PUNK_ITEMS = [
@@ -176,12 +178,32 @@ const PUNK_ITEMS = [
         spacer: true,
         id: 34
     },
-]
+];
+
+const MOBILE_EXTRA = 1;
 
 const Punks = () => {
+    const [width, setWidth] = useState(window.innerWidth);
+
+	useEffect(() => {
+        window.addEventListener("resize", () => {
+            setWidth(window.innerWidth);
+        });
+    }, []);
+
+    const extraPunks = [];
+    if (width < 1000) {
+        for (let i = 0; i < MOBILE_EXTRA; i++) {
+            extraPunks.push({
+                spacer: true,
+                id: PUNK_ITEMS.length + i
+            });
+        }
+    }
+
     return <div className="punks">
         {
-            PUNK_ITEMS.map((item) => (
+            [...PUNK_ITEMS, ...extraPunks].map((item) => (
                 <div className='punk-item' key={item.id}>
                     {item.spacer && <div className='punk-spacer'>
                         <div>?</div>
