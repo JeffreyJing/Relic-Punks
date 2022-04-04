@@ -33,11 +33,11 @@ import ptiffanywatch from '../../assets/images/punks/tiffanywatch.jpg';
 import pvw from '../../assets/images/punks/vw.jpg';
 import pwalkman from '../../assets/images/punks/walkman.jpg';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 
 import './index.css';
 import SimpleModal from 'simple-react-modal';
-import { useContext } from 'react/cjs/react.production.min';
+
 import { Web3Context } from '../../context/web3-context';
 
 const PUNK_ITEMS = [
