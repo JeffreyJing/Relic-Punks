@@ -49,3 +49,7 @@
     height: 420px;
     object-fit: fill;
 }
+
+.active-punk h2 {
+    color: black;
+}
