@@ -130,6 +130,11 @@
 	width: 100%;
 }
 
+.frequently-asked-questions .answers {
+	font-size: 20px;
+	color: rgb(172, 167, 167);
+}
+
 @media screen and (max-width: 1000px) {
 	.footbar {
 		grid-template-columns: 1fr;
@@ -156,7 +161,7 @@
 		padding-right: 10%;
 	}
 
-	.relics-text-content  {
+	.relics-text-content {
 		margin: auto;
 	}
 }

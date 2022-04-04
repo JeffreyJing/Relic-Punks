@@ -43,3 +43,9 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+
+.active-punk img {
+    width: 420px;
+    height: 420px;
+    object-fit: fill;
+}

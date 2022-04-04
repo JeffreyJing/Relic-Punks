@@ -59,11 +59,17 @@ const Home = () => {
 			<div className='frequently-asked-questions'>
 				<h2>FREQUENTLY ASKED QUESTIONS</h2>
 				<p>What are Relic Punks and why do they matter?</p>
+				<p className='answers'>The “Relic Punks” are a 33 piece tribute to important cultural technology of the past. The collection uses nostalgia to bring back the emotional relationship and connections we had growing up with consumer devices.</p>
 				<p>How do I participate in the mint, and what will they cost?</p>
+				<p className='answers'>The only way to participate in the Relic Punks mint is to be holding a Relics Pass at the time of mint.</p> 
 				<p>I'm thinking of buying a Relics Pass NFT, is there anything to be aware of?</p>
+				<p className='answers'>Yes. Relics Pass benefits are tied to our Terms of Use. Additionally, if you're interested in minting a Relic Punk, and minting has begun, please check to make sure the Relics Pass NFT you are purchasing hasn't been used to mint a Punk, as there is only one Punk mint per Relics Pass NFT. Metarelics makes no guarantee of NFT eligibility.</p> 
 				<p>I'm not a Relics Pass member, is there still a way to purchase a Relic Punk?</p>
+				<p className='answers'>Yes, as the Relic Punks begin to mint, it’s inevitable that some of them will find their way to the open market. They can be purchased on the approved OpenSea listing from Metarelics_Official. </p>
 				<p>How many Relic Punks will be minted in total?</p>
+				<p className='answers'>There will only be 1000 Relic Punks minted in total, one for each pass holder. If a pass holder does not claim their Relic Punk during the mint period, the total supply may be less than 1000. </p>
 				<p>Which chain will the Relic Punks be minted on?</p>
+				<p className='answers'>Relic Punks will be minted on the Ethereum L1 blockchain.</p>
 			</div>
 			
 			<div className='footbar'>
