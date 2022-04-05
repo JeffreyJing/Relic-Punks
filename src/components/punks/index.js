@@ -1,7 +1,6 @@
 import p2140 from '../../assets/images/punks/2140.jpg';
 import p2140gv from '../../assets/images/punks/2140garryv.jpg';
 import p2338 from '../../assets/images/punks/2338.jpg';
-import p4609 from '../../assets/images/punks/4609.jpg';
 import p6578 from '../../assets/images/punks/6578.jpg';
 import p9671 from '../../assets/images/punks/9671.jpg';
 import patari from '../../assets/images/punks/atari.jpg';
@@ -10,16 +9,12 @@ import pc3po from '../../assets/images/punks/c3po.jpg';
 import pcasio from '../../assets/images/punks/casio.jpg';
 import pcola from '../../assets/images/punks/cola.jpg';
 import pezbaked from '../../assets/images/punks/ezbaked.jpg';
-import pfootball from '../../assets/images/punks/football.jpg';
-import pgameboykevin from '../../assets/images/punks/gameboykevin.jpg';
 import pgamecube from '../../assets/images/punks/gamecube.jpg';
 import phello from '../../assets/images/punks/hello.jpg';
 import pironman from '../../assets/images/punks/ironman.jpg';
-import pjuke from '../../assets/images/punks/juke.jpg';
 import pledger from '../../assets/images/punks/ledger.jpg';
 import plite from '../../assets/images/punks/lite.jpg';
 import pmac from '../../assets/images/punks/mac.jpg';
-import pmag from '../../assets/images/punks/mag.jpg';
 import pmpc from '../../assets/images/punks/mpc.jpg';
 import pn64 from '../../assets/images/punks/n64.jpg';
 import ppac from '../../assets/images/punks/pac.jpg';
@@ -29,7 +24,6 @@ import ppop from '../../assets/images/punks/pop.jpg';
 import pprime from '../../assets/images/punks/prime.jpg';
 import pr2d2 from '../../assets/images/punks/r2d2.jpg';
 import pspeakspell from '../../assets/images/punks/speakspell.jpg';
-import ptiffanywatch from '../../assets/images/punks/tiffanywatch.jpg';
 import pvw from '../../assets/images/punks/vw.jpg';
 import pwalkman from '../../assets/images/punks/walkman.jpg';
 
@@ -55,11 +49,6 @@ const PUNK_ITEMS = [
         name: 'Cryptopunk #2338 - 7CD3FC',
         image: p2338,
         id: 2
-    },
-    {
-        name: 'Cryptopunk #4609',
-        image: p4609,
-        id: 3
     },
     {
         name: 'Cryptopunk #6578',
@@ -102,16 +91,6 @@ const PUNK_ITEMS = [
         id: 11
     },
     {
-        name: 'Classic Football Punk',
-        image: pfootball,
-        id: 12
-    },
-    {
-        name: 'Gameboy Kevin Punk',
-        image: pgameboykevin,
-        id: 13
-    },
-    {
         name: 'Gamecube Punk',
         image: pgamecube,
         id: 14
@@ -127,11 +106,6 @@ const PUNK_ITEMS = [
         id: 16
     },
     {
-        name: 'Juke Punk',
-        image: pjuke,
-        id: 17
-    },
-    {
         name: 'Ledger Punk',
         image: pledger,
         id: 18
@@ -145,11 +119,6 @@ const PUNK_ITEMS = [
         name: 'Mac Punk',
         image: pmac,
         id: 20
-    },
-    {
-        name: 'Mag Punk',
-        image: pmag,
-        id: 21
     },
     {
         name: 'MPC Punk',
@@ -195,11 +164,6 @@ const PUNK_ITEMS = [
         name: 'Speakspell Punk',
         image: pspeakspell,
         id: 30
-    },
-    {
-        name: 'Tiffany Watch Punk',
-        image: ptiffanywatch,
-        id: 31
     },
     {
         name: 'VW Punk',
