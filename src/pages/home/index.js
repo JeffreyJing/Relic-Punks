@@ -26,7 +26,7 @@ const Home = () => {
 		<>
 			<div className='main-banner'>
 				<h2>RELIC PUNKS</h2>
-				<p>Choose Wisely</p>
+				<p>Which One Will You Pick?</p>
 				<ConnectButton />
 				<div className='relics-pass-status'><RelicsPassStatus /></div>
 			</div>
