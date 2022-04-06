@@ -1,5 +1,5 @@
 import p2140 from '../../assets/images/punks/2140.jpg';
-import p2140gv from '../../assets/images/punks/2140garryv.jpg';
+import p2140gv from '../../assets/images/punks/2140garyv.jpg';
 import p2338 from '../../assets/images/punks/2338.jpg';
 import p6578 from '../../assets/images/punks/6578.jpg';
 import p9671 from '../../assets/images/punks/9671.jpg';
@@ -26,6 +26,7 @@ import pr2d2 from '../../assets/images/punks/r2d2.jpg';
 import pspeakspell from '../../assets/images/punks/speakspell.jpg';
 import pvw from '../../assets/images/punks/vw.jpg';
 import pwalkman from '../../assets/images/punks/walkman.jpg';
+import pjuke from '../../assets/images/punks/juke.jpg';
 
 import { useState, useEffect, useContext } from 'react';
 
@@ -49,6 +50,11 @@ const PUNK_ITEMS = [
         name: 'Cryptopunk #2338 - 7CD3FC',
         image: p2338,
         id: 2
+    },
+    {
+        name: 'Juke Punk',
+        image: pjuke,
+        id: 3
     },
     {
         name: 'Cryptopunk #6578',
