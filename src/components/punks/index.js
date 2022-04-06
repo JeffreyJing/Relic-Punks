@@ -187,7 +187,7 @@ const PUNK_ITEMS = [
     },
 ];
 
-const MOBILE_EXTRA = 1;
+const MOBILE_EXTRA = 2;
 
 const Punks = () => {
     const { connected } = useContext(Web3Context);
@@ -222,6 +222,7 @@ const Punks = () => {
     }
     
     const activePunkItem = activePunk ? PUNK_ITEMS[activePunk] : undefined;
+    const activeEditionsMinted = activePunkItem ? (editionsMinted[activePunkItem.id] ?? 0) : 0;
 
     return (
         <>
@@ -231,6 +232,7 @@ const Punks = () => {
                     backgroundColor: 'black',
                     width: width < 1000 ? 300 : 500,
                     padding: width < 1000 ? 10 : 20,
+                    borderRadius: 15
                 }}
                 transitionSpeed={250}
             >
@@ -238,7 +240,7 @@ const Punks = () => {
                     <div className='active-punk'>
                         <img src={activePunkItem.image} />
                         <h2>{activePunkItem.name}</h2>
-                        <p>Editions Minted: {}</p>
+                        <p>Editions Minted: {activeEditionsMinted}</p>
                         <button>MINT PUNK</button>
                     </div>
                 )}

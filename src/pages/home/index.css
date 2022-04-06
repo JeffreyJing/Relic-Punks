@@ -133,6 +133,7 @@
 .frequently-asked-questions .answers {
 	font-size: 20px;
 	color: rgb(172, 167, 167);
+	font-family: 'Interstate Light';
 }
 
 @media screen and (max-width: 1000px) {
