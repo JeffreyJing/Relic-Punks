@@ -227,8 +227,10 @@ const Punks = () => {
         <>
             <SimpleModal
                 show={activePunk !== undefined} onClose={() => setActivePunk(undefined)}
-                style={{
-                    backgroundColor: 'black'
+                containerStyle={{
+                    backgroundColor: 'black',
+                    width: width < 1000 ? 300 : 500,
+                    padding: width < 1000 ? 10 : 20,
                 }}
             >
                 {activePunkItem && (

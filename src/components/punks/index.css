@@ -35,6 +35,24 @@
     align-items: center;
 }
 
+
+.active-punk {
+    background-color: black;
+    /* width: 100%; */
+}
+
+.active-punk img {
+    width: 100%;
+}
+
+.active-punk h2 {
+    color: white;
+}
+
+.active-punk {
+    text-align: center;
+}
+
 @media screen and (max-width: 1000px) {
     .punks {
         width: 90%;
@@ -42,15 +60,8 @@
         row-gap: 20px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-}
 
-.active-punk img {
-    width: 420px;
-    height: 420px;
-    object-fit: fill;
-}
-
-.active-punk h2 {
-    color: black;
-    text-align: center;
+    .active-punk img {
+        width: 80%;
+    }
 }
