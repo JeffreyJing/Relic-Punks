@@ -53,6 +53,10 @@
     text-align: center;
 }
 
+.simple-modal {
+    transition: 'opacity 0.25s ease-in';
+}
+
 @media screen and (max-width: 1000px) {
     .punks {
         width: 90%;
