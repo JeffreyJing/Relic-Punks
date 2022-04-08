@@ -28,12 +28,16 @@ import pvw from '../../assets/images/punks/vw.jpg';
 import pwalkman from '../../assets/images/punks/walkman.jpg';
 import pjuke from '../../assets/images/punks/juke.jpg';
 
+import relicPunksAbi from '../../assets/abis/relic-punks-abi.json';
+import relicPassAbi from '../../assets/abis/relic-pass-abi.json';
+
 import React, { useState, useEffect, useContext } from 'react';
 
 import './index.css';
 // import SimpleModal from 'simple-react-modal';
 
 import { Web3Context } from '../../context/web3-context';
+import { CONTRACT_ADDRESS, RELIC_PASS_CONTRACT_ADDRESS } from '../../constants';
 
 const PUNK_ITEMS = [
     {
@@ -190,18 +194,48 @@ const PUNK_ITEMS = [
 const MOBILE_EXTRA = 2;
 
 const Punks = () => {
-    const { connected } = useContext(Web3Context);
+    const { connected, web3, address } = useContext(Web3Context);
     const [width, setWidth] = useState(window.innerWidth);
     const [activePunk, setActivePunk] = useState(undefined);
     const [editionsMinted, setEditionsMinted] = useState({});
+    const [passIdsOwned, setPassIdsOwned] = useState({});
+    const [selectedPassId, setSelectedPassId] = useState(undefined);
+    const [error, setError] = useState(undefined);
 
-    useEffect(() => {
-        let canceled = false;
+    useEffect(async () => {
 
-        // TODO: GET EDITIONS MINTED COUNT FROM THE CONTRACT HERE, PROCESS
+        let interval = setInterval(async () => {
+
+          if (!connected) {
+            return;
+          }
+
+          try {
+            const punksContract = createPunksContract();
+            const _editionsMinted = await punksContract.methods.getPunksEditionCounter().call();
+    
+            const passContract = createPassContract();
+            const tokenIdsOwned = (await passContract.methods.walletOfOwner(address).call()).map(d => Number(d));
+            const isClaimableStates = await punksContract.methods.arePassIdsClaimable(tokenIdsOwned).call();
+    
+            const _passStates = {};
+            tokenIdsOwned.forEach((tokenId, i) => {
+              _passStates[tokenId] =  isClaimableStates[i];
+            });
+    
+            setPassIdsOwned(_passStates);
+            // convert string -> number
+            setEditionsMinted(_editionsMinted.map(d => Number(d)));
+          } catch(e) {
+            console.log("ERROR", e);
+          }
+        }, 1000);
 
         return () => {
-            canceled = true;
+            // canceled = true;
+            if (interval) {
+              clearInterval(interval);
+            }
         }
     }, [connected])
 
@@ -220,6 +254,22 @@ const Punks = () => {
             });
         }
     }
+
+    async function mint(activePunkId) {
+      if (selectedPassId === undefined) {
+        return;
+      }
+      const punksContract = createPunksContract();
+
+      const tx = {
+        from: address,
+        to: CONTRACT_ADDRESS,
+        data: punksContract.methods.mint(selectedPassId, activePunkId).encodeABI()
+      };
+
+      const receipt = await web3.eth.sendTransaction(tx);
+      console.log("RECEIPT", receipt);
+    }
     
     const activePunkItem = activePunk !== undefined ? PUNK_ITEMS[activePunk] : undefined;
     const activeEditionsMinted = activePunkItem ? (editionsMinted[activePunkItem.id] ?? 0) : 0;
@@ -232,7 +282,10 @@ const Punks = () => {
                     backgroundColor: 'black',
                     width: width < 1000 ? 300 : 500,
                     padding: width < 1000 ? 10 : 20,
-                    borderRadius: 15
+                    borderRadius: 15,
+                }}
+                style={{
+                  height: 'fit-content'
                 }}
                 transitionSpeed={250}
             >
@@ -241,7 +294,31 @@ const Punks = () => {
                         <img src={activePunkItem.image} />
                         <h2>{activePunkItem.name}</h2>
                         <p>Editions Minted: {activeEditionsMinted}</p>
-                        <button>MINT PUNK</button>
+
+                        <div>
+                          <h3>Select a pass to mint with</h3>
+                          <div className='relic-passes'>
+                            {Object.keys(passIdsOwned).map((passId) => (
+                              <button
+                                className={`pass-id-button ${passIdsOwned[passId] ? '' : 'pass-claimed'} ${selectedPassId === passId ? 'pass-active' : ''}`}
+                                onClick={() => {
+                                  if (passIdsOwned[passId]) {
+                                    setSelectedPassId(passId);
+                                  }
+                                }}
+                              >
+                                #{passId}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                        <button
+                          className={`${selectedPassId === undefined ? 'mint-punk-disabled' : ''}`}
+                          onClick={() => {
+                            mint(activePunkItem.id);
+                          }}
+                        >MINT PUNK</button>
+                        
                     </div>
                 )}
             </SimpleModal>
@@ -263,6 +340,26 @@ const Punks = () => {
             </div>
         </>
     )
+
+    function createPunksContract() {
+      return new web3.eth.Contract( 
+        relicPunksAbi,
+        CONTRACT_ADDRESS,
+        {
+          from: address
+        }
+      );
+    }
+
+    function createPassContract() {
+      return new web3.eth.Contract(
+        relicPassAbi,
+        RELIC_PASS_CONTRACT_ADDRESS,
+        {
+          from: address
+        }
+      )
+    }
 }
 
 var modal = {
