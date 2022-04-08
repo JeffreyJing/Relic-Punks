@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './index.css';
-import { Banner } from '../../components/banner';
 import sneaksOfNature from '../../assets/images/sneaksofnature.png';
 import { DISCORD_URL, INSTAGRAM_URL, OPENSEA_URL, TWITTER_URL } from '../../constants';
 import { BeCurious, BuildOurBond, CreateOurCulture, DeeperNotWider, DiscordLogo, EveryVoiceMatters, Execute, ForgeOurFuture, InstagramLogo, OpenseaLogoDark, PreserveOurPast, PursueYourPotential, TwitterLogo, ValueFirst } from '../../assets/icons/logos';

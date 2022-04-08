@@ -57,6 +57,10 @@
     transition: 'opacity 0.25s ease-in';
 }
 
+.is-spacer {
+    cursor: unset !important;
+}
+
 @media screen and (max-width: 1000px) {
     .punks {
         width: 90%;

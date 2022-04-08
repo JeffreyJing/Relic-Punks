@@ -3,18 +3,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import { useContext, useEffect } from 'react';
 import { Web3Context } from '../../context/web3-context';
+import relicPassAbi from '../../assets/abis/relic-pass-abi.json';
 
 import './index.css';
+import { RELIC_PASS_CONTRACT_ADDRESS } from '../../constants';
 
 const RelicsPassStatus = () => {
-    const { connected } = useContext(Web3Context);
+    const { connected, web3, address } = useContext(Web3Context);
     const [hasPass, setHasPass] = useState(false);
 
     useEffect(async () => {
         let canceled = false;
 
         if (connected) {
-            // TODO: READ CONTRACT HERE AND SET HAS PASS BASED ON THAT
+            const relicPassContract = createContract();
+            const relicsPassUserBalance = await relicPassContract.methods.balanceOf(address).call();
+            if (Number(relicsPassUserBalance) > 0) {
+                setHasPass(true);
+            }
         }
 
         return () => {
@@ -32,7 +38,17 @@ const RelicsPassStatus = () => {
                 ? <FontAwesomeIcon icon={faCircleCheck} />
                 : <FontAwesomeIcon icon={faCircleXmark} />
         }</span></p>
-    )
+    );
+
+    function createContract() {
+        return new web3.eth.Contract(
+            relicPassAbi,
+            RELIC_PASS_CONTRACT_ADDRESS,
+            {
+                from: address
+            }
+        )
+    }
 }
 
 export default RelicsPassStatus;

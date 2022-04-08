@@ -42,7 +42,7 @@ const PUNK_ITEMS = [
         id: 0
     },
     {
-        name: 'Cryptopunk #2140 - GarryVee',
+        name: 'Cryptopunk #2140 - GaryVee',
         image: p2140gv,
         id: 1
     },
@@ -221,7 +221,7 @@ const Punks = () => {
         }
     }
     
-    const activePunkItem = activePunk ? PUNK_ITEMS[activePunk] : undefined;
+    const activePunkItem = activePunk !== undefined ? PUNK_ITEMS[activePunk] : undefined;
     const activeEditionsMinted = activePunkItem ? (editionsMinted[activePunkItem.id] ?? 0) : 0;
 
     return (
@@ -248,7 +248,7 @@ const Punks = () => {
             <div className="punks">
                 {
                     [...PUNK_ITEMS, ...extraPunks].map((item, i) => (
-                        <div className='punk-item' key={item.id} role='button' onClick={() => {
+                        <div className={`punk-item ${item.spacer ? 'is-spacer' : ''}`} key={item.id} role='button' onClick={() => {
                             if (!item.spacer) {
                                 setActivePunk(i);
                             }
