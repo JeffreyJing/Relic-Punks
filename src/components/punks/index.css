@@ -51,7 +51,7 @@
 
 .active-punk {
     text-align: center;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 .simple-modal {
@@ -72,7 +72,9 @@
 }
 
 .relic-passes {
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     column-gap: 5px;
     row-gap: 5px;

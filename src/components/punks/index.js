@@ -284,9 +284,9 @@ const Punks = () => {
                     padding: width < 1000 ? 10 : 20,
                     borderRadius: 15,
                 }}
-                style={{
-                  height: 'fit-content'
-                }}
+                // style={{
+                //   height: 'fit-content'
+                // }}
                 transitionSpeed={250}
             >
                 {activePunkItem && (
