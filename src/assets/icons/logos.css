@@ -5,6 +5,12 @@
 	width: 60%;
 }
 
+.flag-logo {
+	fill: white;
+	height: 200px;
+	width: auto;
+}
+
 .build-bond-logo {
 	color: black;
 	fill: black;

@@ -47,19 +47,28 @@
 	padding-bottom: 100px;
 }
 
+.footbar-r-logo {
+	display: flex;
+	justify-content: center;
+}
+
 .footbar-logos {
 	display: flex;
 	justify-content: center;
 	column-gap: 40px;
+	align-items: center;
 }
 
 .footbar-powered-by {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	text-align: right;
 	font-family: 'Interstate Light';
 	padding-right: 10vw;
 }
 
-.footbar svg {
+.footbar-logos svg {
 	fill: white;
 	height: 60px;
 	width: 60px;
