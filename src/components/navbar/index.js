@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import AnimateHeight from 'react-animate-height';
 import './index.css';
 import { INSTAGRAM_URL, TWITTER_URL, PRINTS_URL } from '../../constants';
-import { DiscordLogo, InstagramLogo, TwitterLogo } from '../../assets/icons/logos';
+import { DiscordLogo, InstagramLogo, NavbarEmblem, TwitterLogo } from '../../assets/icons/logos';
 
 const Navbar = () => {
 	const [width, setWidth] = useState(window.innerWidth);
@@ -41,7 +41,7 @@ const Navbar = () => {
 					)} */}
 				</div>
 				<div className='navbar-emblem'>
-					METARELICS
+					<NavbarEmblem />
 				</div>
 				<div className='navbar-items'>
 					{/* <a href={TWITTER_URL} target="_blank" rel="noopener noreferrer"><TwitterLogo /></a>

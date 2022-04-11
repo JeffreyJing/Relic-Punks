@@ -27,6 +27,14 @@
 	transition: fill 250ms ease;
 }
 
+.navbar-emblem-icon {
+	fill: white;
+	width: 400px;
+	height: auto;
+	margin-top: -180px;
+	margin-bottom: -180px;
+}
+
 a:hover, .navbar-logo:hover {
 	color: var(--hover-color) !important;
 	fill: var(--hover-color) !important;
@@ -50,9 +58,18 @@ a:hover, .navbar-logo:hover {
 	/* .navbar-logo-opensea-dark path {
 		fill: #fff !important;
 	} */
+	.navbar-emblem-icon {
+		fill: white;
+		width: 300px;
+		height: auto;
+		margin-top: -180px;
+		margin-bottom: -180px;
+	}
+	
 }
 
 @media screen and (max-width: 540px) {
+	
 	.navbar-logo {
 		height: 20px;
 		width: 20px;
