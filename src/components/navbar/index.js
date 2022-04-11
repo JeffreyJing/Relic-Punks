@@ -3,6 +3,7 @@ import AnimateHeight from 'react-animate-height';
 import './index.css';
 import { INSTAGRAM_URL, TWITTER_URL, PRINTS_URL } from '../../constants';
 import { DiscordLogo, InstagramLogo, NavbarEmblem, TwitterLogo } from '../../assets/icons/logos';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 	const [width, setWidth] = useState(window.innerWidth);
@@ -41,7 +42,7 @@ const Navbar = () => {
 					)} */}
 				</div>
 				<div className='navbar-emblem'>
-					<NavbarEmblem />
+					<Link to='/'><NavbarEmblem /></Link>
 				</div>
 				<div className='navbar-items'>
 					{/* <a href={TWITTER_URL} target="_blank" rel="noopener noreferrer"><TwitterLogo /></a>

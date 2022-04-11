@@ -7,6 +7,7 @@ import relicPassAbi from '../../assets/abis/relic-pass-abi.json';
 
 import './index.css';
 import { RELIC_PASS_CONTRACT_ADDRESS } from '../../constants';
+import { Link } from 'react-router-dom';
 
 const RelicsPassStatus = () => {
     const { connected, web3, address } = useContext(Web3Context);
@@ -29,15 +30,20 @@ const RelicsPassStatus = () => {
     }, [connected]);
 
     return (
-        <p>Relics Pass <span className={
-            hasPass
-                ? 'has-pass'
-                : 'no-pass'
-        }>{
-            hasPass
-                ? <FontAwesomeIcon icon={faCircleCheck} />
-                : <FontAwesomeIcon icon={faCircleXmark} />
-        }</span></p>
+        <>
+            <p>Relics Pass <span className={
+                hasPass
+                    ? 'has-pass'
+                    : 'no-pass'
+            }>{
+                hasPass
+                    ? <FontAwesomeIcon icon={faCircleCheck} />
+                    : <FontAwesomeIcon icon={faCircleXmark} />
+            }</span></p>
+            <p>
+                Check claimable passes <Link to='claimable-search'>here</Link>.
+            </p>
+        </>
     );
 
     function createContract() {

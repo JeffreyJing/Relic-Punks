@@ -1,0 +1,28 @@
+.cs-container {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.cs-container h2 {
+    font-size: 40px;
+}
+
+.cs-container p {
+    font-family: 'Interstate Light';
+}
+
+.cs-container-input {
+    margin-top: 50px;
+}
+
+.cs-container-input button {
+    margin-left: 10px;
+}
+
+.cs-unclaimed {
+    color: green;
+}
+
+.cs-claimed {
+    color: red;
+}
