@@ -103,87 +103,87 @@ const PUNK_ITEMS = [
     {
         name: 'Fair and Square',
         image: pgamecube,
-        id: 14
+        id: 12
     },
     {
         name: 'Class Clown',
         image: phello,
-        id: 15
+        id: 13
     },
     {
         name: 'Mark 1',
         image: pironman,
-        id: 16
+        id: 14
     },
     {
         name: 'Security Blanket',
         image: pledger,
-        id: 18
+        id: 15
     },
     {
         name: 'Bright Side',
         image: plite,
-        id: 19
+        id: 16
     },
     {
         name: 'Hot Wallet',
         image: pmac,
-        id: 20
+        id: 17
     },
     {
         name: 'Face the Music',
         image: pmpc,
-        id: 22
+        id: 18
     },
     {
         name: 'Cheat Code',
         image: pn64,
-        id: 23
+        id: 19
     },
     {
         name: 'Bite Me',
         image: ppac,
-        id: 24
+        id: 20
     },
     {
         name: 'Dialed In',
         image: pphone,
-        id: 25
+        id: 21
     },
     {
         name: 'Instant Gratification',
         image: ppolaroid,
-        id: 26
+        id: 22
     },
     {
         name: 'Double Toasted',
         image: ppop,
-        id: 27
+        id: 23
     },
     {
         name: 'Keep on Truckin\'',
         image: pprime,
-        id: 28
+        id: 24
     },
     {
         name: 'Space Junk',
         image: pr2d2,
-        id: 29
+        id: 25
     },
     {
         name: 'Speak Up',
         image: pspeakspell,
-        id: 30
+        id: 26
     },
     {
         name: 'Bugged Out',
         image: pvw,
-        id: 32
+        id: 27
     },
     {
         name: 'Loud Mouth',
         image: pwalkman,
-        id: 33
+        id: 28
     },
     // need question mark (surprise)
     {
