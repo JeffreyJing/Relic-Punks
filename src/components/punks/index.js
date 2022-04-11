@@ -41,150 +41,151 @@ import { CONTRACT_ADDRESS, RELIC_PASS_CONTRACT_ADDRESS } from '../../constants';
 
 const PUNK_ITEMS = [
     {
-        name: 'Cryptopunk #2140',
+        name: 'Pixel Perfect',
         image: p2140,
         id: 0
     },
     {
-        name: 'Cryptopunk #2140 - GaryVee',
+        name: 'Amped Ape',
         image: p2140gv,
         id: 1
     },
     {
-        name: 'Cryptopunk #2338 - 7CD3FC',
+        name: 'Teacher\'s Pet',
         image: p2338,
         id: 2
     },
     {
-        name: 'Juke Punk',
+        name: 'Broken Record',
         image: pjuke,
         id: 3
     },
     {
-        name: 'Cryptopunk #6578',
+        name: 'Sketched Out',
         image: p6578,
         id: 4
     },
     {
-        name: 'Cryptopunk #9671 - 0F70B8',
+        name: 'Tuned Out',
         image: p9671,
         id: 5
     },
     {
-        name: 'Atari Punk',
+        name: 'Bundle of Joy',
         image: patari,
         id: 6
     },
     {
-        name: 'ATM Punk',
+        name: 'Money Talks',
         image: patm,
         id: 7
     },
     {
-        name: 'Crypto C3P0 Punk',
+        name: 'Strange Computer',
         image: pc3po,
         id: 8
     },
     {
-        name: 'Casio Punk',
+        name: 'Golden Hour',
         image: pcasio,
         id: 9
     },
     {
-        name: 'Cola Punk',
+        name: 'Ice Cold',
         image: pcola,
         id: 10
     },
     {
-        name: 'Easy Baked Punk',
+        name: 'Icing on Top',
         image: pezbaked,
         id: 11
     },
     {
-        name: 'Gamecube Punk',
+        name: 'Fair and Square',
         image: pgamecube,
         id: 14
     },
     {
-        name: 'Hello Punk',
+        name: 'Class Clown',
         image: phello,
         id: 15
     },
     {
-        name: 'Iron man Punk',
+        name: 'Mark 1',
         image: pironman,
         id: 16
     },
     {
-        name: 'Ledger Punk',
+        name: 'Security Blanket',
         image: pledger,
         id: 18
     },
     {
-        name: 'Lite Punk',
+        name: 'Bright Side',
         image: plite,
         id: 19
     },
     {
-        name: 'Mac Punk',
+        name: 'Hot Wallet',
         image: pmac,
         id: 20
     },
     {
-        name: 'MPC Punk',
+        name: 'Face the Music',
         image: pmpc,
         id: 22
     },
     {
-        name: 'N64 Punk',
+        name: 'Cheat Code',
         image: pn64,
         id: 23
     },
     {
-        name: 'Pac Punk',
+        name: 'Bite Me',
         image: ppac,
         id: 24
     },
     {
-        name: 'Phone Punk',
+        name: 'Dialed In',
         image: pphone,
         id: 25
     },
     {
-        name: 'Polaroid Punk',
+        name: 'Instant Gratification',
         image: ppolaroid,
         id: 26
     },
     {
-        name: 'Pop Punk',
+        name: 'Double Toasted',
         image: ppop,
         id: 27
     },
     {
-        name: 'Prime Punk',
+        name: 'Keep on Truckin\'',
         image: pprime,
         id: 28
     },
     {
-        name: 'R2D2 Punk',
+        name: 'Space Junk',
         image: pr2d2,
         id: 29
     },
     {
-        name: 'Speakspell Punk',
+        name: 'Speak Up',
         image: pspeakspell,
         id: 30
     },
     {
-        name: 'VW Punk',
+        name: 'Bugged Out',
         image: pvw,
         id: 32
     },
     {
-        name: 'Walkman Punk',
+        name: 'Loud Mouth',
         image: pwalkman,
         id: 33
     },
+    // need question mark (surprise)
     {
         spacer: true,
         id: 34
