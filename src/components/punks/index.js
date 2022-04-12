@@ -27,7 +27,7 @@ import pspeakspell from '../../assets/images/punks/speakspell.jpg';
 import pvw from '../../assets/images/punks/vw.jpg';
 import pwalkman from '../../assets/images/punks/walkman.jpg';
 import pjuke from '../../assets/images/punks/juke.jpg';
-
+import psurprise from '../../assets/images/punks/surprise.png'
 import relicPunksAbi from '../../assets/abis/relic-punks-abi.json';
 import relicPassAbi from '../../assets/abis/relic-pass-abi.json';
 
@@ -185,10 +185,10 @@ const PUNK_ITEMS = [
         image: pwalkman,
         id: 28
     },
-    // need question mark (surprise)
     {
-        spacer: true,
-        id: 34
+        name: 'Surprise',
+        image: psurprise,
+        id: 29
     },
 ];
 
