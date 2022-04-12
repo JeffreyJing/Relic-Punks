@@ -88,8 +88,15 @@
 	padding-right: 10%;
 }
 
-.relics-text-content p {
+.claim-search-link {
+	text-decoration: underline;
+}
+
+.relics-text-content p:first {
 	margin-top: 75px;
+}
+
+.relics-text-content p {
 	font-size: 20px;
 	font-family: 'Interstate Light', sans-serif;
 }

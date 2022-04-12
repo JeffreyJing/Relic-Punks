@@ -192,7 +192,7 @@ const PUNK_ITEMS = [
     },
 ];
 
-const MOBILE_EXTRA = 2;
+const MOBILE_EXTRA = 0;
 
 const Punks = () => {
     const { connected, web3, address } = useContext(Web3Context);
@@ -307,6 +307,7 @@ const Punks = () => {
                                     setSelectedPassId(passId);
                                   }
                                 }}
+                                key={`punk-button-${passId}`}
                               >
                                 #{passId}
                               </button>

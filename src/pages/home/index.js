@@ -49,6 +49,9 @@ const Home = () => {
 						an artist collective led by Jeff Cole
 						&amp; powered by the Ikonick team.
 					</p>
+					<p>
+						If you're interested in buying a Relics Pass to mint a Relic Punk, please check to make sure the token ID has yet to claim their Punk. <span className='claim-search-link'><NavLink to='claimable-search'>Search by token ID here.</NavLink></span>
+					</p>
 				</div>
 				<div className='relics-image'>
 					<img src={relic} alt={'Metarelic'}/>
