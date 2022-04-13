@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './index.css';
-import sneaksOfNature from '../../assets/images/sneaksofnature.png';
 import { DISCORD_URL, INSTAGRAM_URL, OPENSEA_URL, TWITTER_URL } from '../../constants';
-import { BeCurious, BuildOurBond, CreateOurCulture, DeeperNotWider, DiscordLogo, EveryVoiceMatters, Execute, FlagLogo, ForgeOurFuture, InstagramLogo, OpenseaLogoDark, PreserveOurPast, PursueYourPotential, TwitterLogo, ValueFirst } from '../../assets/icons/logos';
-import teamImg from '../../assets/images/team.png';
-import buildOurBond from '../../assets/images/bottom-banner.jpg';
+import { DiscordLogo, FlagLogo, InstagramLogo, OpenseaLogoDark, TwitterLogo} from '../../assets/icons/logos';
 import { NavLink } from 'react-router-dom';
-import relicPunks from '../../assets/images/relicpunks.jpg';
 import ConnectButton from '../../components/connect-button';
 import Punks from '../../components/punks';
 import relic from '../../assets/images/bottom-banner.jpg';
@@ -61,7 +57,7 @@ const Home = () => {
 			<div className='frequently-asked-questions'>
 				<h2>FREQUENTLY ASKED QUESTIONS</h2>
 				<p>What are Relic Punks and why do they matter?</p>
-				<p className='answers'>The “Relic Punks” are a 33 piece tribute to important cultural technology of the past. The collection uses nostalgia to bring back the emotional relationship and connections we had growing up with consumer devices.</p>
+				<p className='answers'>The “Relic Punks” are a 36 piece tribute to important cultural technology of the past. The collection uses nostalgia to bring back the emotional relationship and connections we had growing up with consumer devices.</p>
 				<p>How do I participate in the mint, and what will they cost?</p>
 				<p className='answers'>The only way to participate in the Relic Punks mint is to be holding a Relics Pass at the time of mint.</p> 
 				<p>I'm thinking of buying a Relics Pass NFT, is there anything to be aware of?</p>

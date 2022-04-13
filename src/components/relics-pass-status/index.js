@@ -40,6 +40,9 @@ const RelicsPassStatus = () => {
                     ? <FontAwesomeIcon icon={faCircleCheck} />
                     : <FontAwesomeIcon icon={faCircleXmark} />
             }</span></p>
+            <p>
+                Check claimable passes <Link to='claimable-search'>here</Link>.
+            </p>
         </>
     );
 
